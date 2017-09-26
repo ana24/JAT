@@ -1,0 +1,122 @@
+<div class="container fondoDiv">
+
+  <form action="" method="post">
+
+    <div class="form-group">
+      <div class="row margenInf">
+        <div class="col-md-3">
+          <label>Seleccione tipo de propiedad</label>
+        </div>
+        <div class="col-md-3">
+          <select class="form-control form-control-sm" name="cboPropiedad">
+            <option selected>Propiedad</option>
+            <option value="1">Casas</option>
+            <option value="2">Departamentos</option>
+            <option value="3">Habitaciones</option>
+            <option value="4">Lotes</option>
+            <option value="5">Locales</option>
+            <option value="6">Oficinas</option>
+            <option value="7">Terrenos</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row margenInf">
+        <div class="col-md-3">
+          <label>Seleccione tipo de contrato</label>
+        </div>
+        <div class="col-md-3">
+          <select class="form-control form-control-sm" name="cboContrato">
+            <option selected>Contrato</option>
+            <option value="1">Venta</option>
+            <option value="2">Alquiler</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row margenInf">
+        <div class="col-md-3">
+          <label for="">Selecione departamento</label>
+        </div>
+        <div class="col-md-3">
+          <select class="form-control form-control-sm" name="cboDepartamento">
+            <option value="">Piura</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row margenInf">
+        <div class="col-md-3">
+          <label for="">Seleccione provincia</label>
+        </div>
+        <div class="col-md-3">
+          <select class="form-control form-control-sm" name="cboProvincia">
+            <option selected>Provincia</option>
+            <option value="1">Ayabaca</option>
+            <option value="2">Huancabamba</option>
+            <option value="3">Morropon</option>
+            <option value="4">Paita</option>
+            <option value="5">Piura</option>
+            <option value="6">Sechura</option>
+            <option value="7">Sullana</option>
+            <option value="8">Talara</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <label>Ingrese Título</label>
+        </div>
+      </div>
+
+      <div class="row margenInf">
+        <div class="col-md-8">
+          <input type="text" class="form-control form-control-sm" name="" placeholder="Ingrese título">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <label>Ingrese descripción</label>
+        </div>
+      </div>
+      <textarea class="form-control margenInf" rows="5"></textarea>
+
+      <div class="row margenInf">
+        <div class="col-md-6">
+          <label for="exampleFormControlFile1">Suba las fotos de la propiedad</label>
+          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <label>Marque en el mapa la ubicación del inmueble</label>
+        </div>
+      </div>
+
+      <div class="margenInf">
+        <sebm-google-map [zoom]="zoom" [latitude]="lat" [longitude]="lng">
+          <sebm-google-map-marker
+           [latitude]="lat"
+           [longitude]="lng">
+            <sebm-google-map-info-window>
+              <strong>Título</strong>
+              <p>Aquí se encuentra la propiedad</p>
+            </sebm-google-map-info-window>
+          </sebm-google-map-marker>
+        </sebm-google-map>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-primary">Cancelar</button>
+      </div>
+    </div>
+    <br>
+  </form>
+
+</div>
